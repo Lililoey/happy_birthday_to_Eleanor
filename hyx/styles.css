@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #dc5e4d;
+}
+
+h2 {
+    font-size: 2em;
+    color: #f6c821;
+
+}
+
+.photo-gallery, .video-section {
+    margin: 20px 0;
+}
+
+.photos-grid {
+    display: grid;/* 全局样式 */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f2f2f2;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 3em;
+        color: #333;
+    }
+    
+    .photo-gallery, .video-section {
+        margin: 20px 0;
+    }
+    
+    /* 网格布局，三列图片 */
+    .photos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 三列布局 */
+        gap: 20px; /* 图片之间的间距 */
+        justify-items: center; /* 图片居中对齐 */
+    }
+    
+    /* 所有图片的基本样式 */
+    .photo {
+        width: 200px; /* 图片统一的宽度 */
+        height: 200px; /* 图片统一的高度 */
+        object-fit: cover; /* 默认图片裁剪适应容器 */
+        border-radius: 10px; /* 圆角效果 */
+        transition: transform 0.3s;
+    }
+    
+    /* 悬停时图片放大 */
+    .photo:hover {
+        transform: scale(1.1);
+    }
+    
+    /* 为 photo4 设置的特殊样式，确保显示完整图片 */
+    .full-photo {
+        object-fit: contain; /* 保证图片不被裁剪，完整显示 */
+    }
+    
+    grid-template-columns: repeat(3, 1fr); /* 三列布局 */
+    gap: 15px;
+    justify-content: center;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+}
+
+video {
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.large-photo {
+    width: 300px; /* 更大的宽度以显示整张照片 */
+    height: auto; /* 保持图片的纵横比 */
+    object-fit: contain; /* 确保完整显示图片，而不会裁剪 */
+}
